@@ -1,0 +1,43 @@
+{
+  "manifest_version": 2,
+
+  "name": "Simple Reader",
+
+  "description": "A basic reader of numeric sequences based on tesseract.js",
+
+  "author": "alnroe",
+
+  "version": "0.1.1",
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{5b99bc97-3720-4d07-b60b-a452f28de7bf}"
+    }
+  },
+
+  "browser_action": {
+    "default_icon": {
+      "19": "icon.svg"
+    },
+    "default_title": "Simple Reader"
+  },
+
+  "icons": {
+    "48": "icon.svg"
+  },
+
+  "background": {
+    "scripts": [
+      "js/background.js",
+      "js/tesseract.min.js"
+    ]
+  },
+
+  "permissions": ["menus", "activeTab", "<all_urls>", "clipboardWrite"],
+
+  "web_accessible_resources": [
+    "js/*.js",
+    "langdata/eng.traineddata.gz"
+  ]
+
+}
